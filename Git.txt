@@ -11,8 +11,8 @@ Installing Git on Windows
 - Change user name, email, text editor"
 git config --global user.name "Kevin Harris"
 git config --global user.email kcshadow@comcast.net
-git config --global core.editor "'C:/Program Files/Notepad++/notepad++.exe' -multiInst -nosession"
-
+(64-bit) git config --global core.editor "'C:/Program Files/Notepad++/notepad++.exe' -multiInst -nosession"
+(32-bit) git config --global core.editor "'C:/Program Files (x86)/Notepad++/notepad++.exe' -multiInst
 
 - Check configuration settings
 git config --list
@@ -28,6 +28,19 @@ git config --list
 - add each file to staging (git add filename, or git add *.c, etc).
 - check status again to be sure files were added (git status)
 - perform initial commit (git commit -m "Initial Commit") - must use double quotes on windows.
-- 
+
+5. Check in changes 
+- check status to see if files have changed (git status)
+- use (git add filename) to begin tracking new files
+- Also (git add filename) to stage modified files
+  Note: the modified file appears in green when staged (read for check in).
+- commit changes (git commit)
+- check git log for change messages (git log)
+
+6. Remove files
+- (git rm)
+
+
+7. GitHub
 
 

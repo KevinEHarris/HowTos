@@ -24,6 +24,10 @@ git config --list
 
 4. Add files to repository and initial commit.
 - move files to directory
-- add each file to staging (add filename, or add *.c, etc).
+- check status of repository (git status)
+- add each file to staging (git add filename, or git add *.c, etc).
+- check status again to be sure files were added (git status)
+- perform initial commit (git commit -m "Initial Commit") - must use double quotes on windows.
+- 
 
 

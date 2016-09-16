@@ -1,0 +1,29 @@
+Installing Git on Windows
+
+1. git website: https://git-scm.com/
+- download Git for Windows 64-bit (2.10.0)
+- free book: Pro Git (https://git-scm.com/book/en/v2)
+- release notes: C:\Program Files\Git\ReleaseNotes.html
+
+2. Set up configurations
+-  file c:\ProgramData\Git\config with WordPad
+
+- Change user name, email, text editor"
+git config --global user.name "Kevin Harris"
+git config --global user.email kcshadow@comcast.net
+git config --global core.editor "'C:/Program Files/Notepad++/notepad++.exe' -multiInst -nosession"
+
+
+- Check configuration settings
+git config --list
+
+
+3. Set up repository
+- create directory, change directory, initialize as Git repository (git init)
+  can use "dir /AH" to see file .git
+
+4. Add files to repository and initial commit.
+- move files to directory
+- add each file to staging (add filename, or add *.c, etc).
+
+

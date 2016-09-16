@@ -42,5 +42,17 @@ git config --list
 
 
 7. GitHub
+- after repository is created:
+
+echo "# HowTos" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git remote add origin https://github.com/KevinEHarris/HowTos.git
+git push -u origin master
+-------------------------------
+git remote add origin https://github.com/KevinEHarris/HowTos.git
+git push -u origin master
+-------------------------------
 
 

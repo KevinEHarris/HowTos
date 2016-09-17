@@ -63,7 +63,6 @@ B. Push changes from local repository to GitHub
 - check status of local repo (git status) {Changes not staged for commit}
 - moved changed files to staging (git add <filename>) {Changes to be committed:}
 - commit changes locally (git commit -m "Updated Git.txt")
-- add update to GitHub (git remote add origin https://github.com/KevinEHarris/HowTos.git)
 - push change to GitHub (git push -u origin master)
 
 

@@ -1,70 +1,94 @@
-Installing Git on Windows
+--------------- Git Local Repositories ---------------------------------------
 
-1. git website: https://git-scm.com/
-- download Git for Windows 64-bit (2.10.0)
-- free book: Pro Git (https://git-scm.com/book/en/v2)
-- release notes: C:\Program Files\Git\ReleaseNotes.html
+1. Installing Git on Windows
+	A. git website: https://git-scm.com/
+	B. download Git for Windows 64-bit (2.10.0)
+	C. free book: Pro Git (https://git-scm.com/book/en/v2)
+	D. release notes: C:\Program Files\Git\ReleaseNotes.html
 
 2. Set up configurations
--  file c:\ProgramData\Git\config with WordPad
+	A.Change user name, email, text editor"
+	(git config --global user.name "Kevin Harris")
+	(git config --global user.email kcshadow@comcast.net)
+	(64-bit) (git config --global core.editor "'C:/Program Files/Notepad++/notepad++.exe' -multiInst -nosession")
+	(32-bit) (git config --global core.editor "'C:/Program Files (x86)/Notepad++/notepad++.exe' -multiInst)
+	B. Check configuration settings
+	(git config --list)
 
-- Change user name, email, text editor"
-git config --global user.name "Kevin Harris"
-git config --global user.email kcshadow@comcast.net
-(64-bit) git config --global core.editor "'C:/Program Files/Notepad++/notepad++.exe' -multiInst -nosession"
-(32-bit) git config --global core.editor "'C:/Program Files (x86)/Notepad++/notepad++.exe' -multiInst
-
-- Check configuration settings
-git config --list
-
-
-3. Set up repository
-- create directory, change directory, initialize as Git repository (git init)
-  can use "dir /AH" to see file .git
+3. Set up local repository
+	A. create directory, change directory
+	B. initialize as Git repository
+ 	  (git init)
+	C. Note: in Windows can use "dir /AH" to see hidden file .git
 
 4. Add files to repository and initial commit.
-- move files to directory
-- check status of repository (git status)
-- add each file to staging (git add filename, or git add *.c, etc).
-- check status again to be sure files were added (git status)
-- perform initial commit (git commit -m "Initial Commit") - must use double quotes on windows.
+	A. move files to directory
+	B. check status of repository
+	   (git status)
+	C. add each file to staging 
+	  (git add filename, or git add *.c, etc).
+	D. check status again to be sure files were added/removed
+  	  (git status)
+	E. perform initial commit 
+	  (git commit -m "Initial Commit") - Note: must use double quotes on windows.
 
-5. Check in changes 
-- check status to see if files have changed (git status)
-- use (git add filename) to begin tracking new files
-- Also (git add filename) to stage modified files
-  Note: the modified file appears in green when staged (read for check in).
-- commit changes (git commit)
-- check git log for change messages (git log)
+5. Check in changes to local repo
+	A. check status to see if files have changed
+ 	  (git status)
+	B. Begin tracking new files or stage modified files
+	  (git add filename)
+	   Note: the modified file appears in green when staged (read for check in).
+	C. Remove files
+	   (git add filename)	  
+	D. commit changes
+ 	  (git commit -m "comments here")
+	E. check git log for change messages
+	  (git log)
 
-6. Remove files
-- (git rm)
+--------------- Git Hub ---------------------------------------
 
+6. GitHub Clone
+	A. Clone GitHub repository to a local repository
+		- Change to git directory 
+		(git clone  https://github.com/KevinEHarris/HowTos.git)
 
-7. GitHub
-- after repository is created:
+7. GitHub Push		
+	A. Push changes from local repository to GitHub
+		- make changes on local files
+		- check status of local repo 
+		  (git status) {Changes not staged for commit}
+		- moved changed files to staging 
+		  (git add <filename>) {Changes to be committed:}
+		- commit changes locally 
+		  (git commit -m "Updated Git.txt")
+		- push change to GitHub 
+		  (git push -u origin master)
+	
+	B. Note: After Repo is created, you get messages:
+	echo "# HowTos" >> README.md
+	git init
+	git add README.md
+	git commit -m "first commit"
+	git remote add origin https://github.com/KevinEHarris/HowTos.git
+	git push -u origin master
+	-------------------------------
+	git remote add origin https://github.com/KevinEHarris/HowTos.git
+	git push -u origin master
+	-------------------------------
 
-echo "# HowTos" >> README.md
-git init
-git add README.md
-git commit -m "first commit"
-git remote add origin https://github.com/KevinEHarris/HowTos.git
-git push -u origin master
--------------------------------
-git remote add origin https://github.com/KevinEHarris/HowTos.git
-git push -u origin master
--------------------------------
- 
-A. Clone GitHub repository to a local repository
-- in Git directory (git clone  https://github.com/KevinEHarris/HowTos.git)
+8. Compare local copy to GitHub
+	- change to directory of local copy:
+	A. Add remote repository to compare
+	(git remote add remote_HowTos https://github.com/KevinEHarris/HowTos.git)
 
-B. Push changes from local repository to GitHub
-- make changes on local files
-- check status of local repo (git status) {Changes not staged for commit}
-- moved changed files to staging (git add <filename>) {Changes to be committed:}
-- commit changes locally (git commit -m "Updated Git.txt")
-- push change to GitHub (git push -u origin master)
+	B. Update local copy of the remote
+	(git fetch remote_HowTos)
 
+	C. Compare local repo branch to remote repo branch
+	(git diff master remote_HowTos/master)
+	{returns blank like if no differences}
 
-
-
+9. Update local repo from GitHub
+	- change to directory of local copy:
+	A. (git pull origin master)
+		

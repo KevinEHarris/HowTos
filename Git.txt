@@ -59,6 +59,13 @@ A. Clone GitHub repository to a local repository
 - in Git directory (git clone  https://github.com/KevinEHarris/HowTos.git)
 
 B. Push changes from local repository to GitHub
-- 
+- make changes on local files
+- check status of local repo (git status) {Changes not staged for commit}
+- moved changed files to staging (git add <filename>) {Changes to be committed:}
+- commit changes locally (git commit -m "Updated Git.txt")
+- add update to GitHub (git remote add origin https://github.com/KevinEHarris/HowTos.git)
+- push change to GitHub (git push -u origin master)
+
+
 
 
